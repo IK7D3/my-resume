@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iman Karimian - Resume</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide-react@latest/dist/lucide-react.js"></script>
+    <script>
+        // Workaround for using lucide-react in browser
+        // In a real React app, you'd import { IconName } from 'lucide-react';
+        // Here, we'll use the global 'lucide' object.
+        // We'll replace this with a better CDN for plain icons.
+    </script>
+    <!-- Using Feather Icons as a simple alternative for non-React CDN -->
+    <script src="https://unpkg.com/feather-icons"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Custom styles for printing */
+        @media print {
+            body {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            .no-print {
+                display: none;
+            }
+            .print-shadow-none {
+                box-shadow: none;
+            }
+            .print-bg-white {
+                background-color: #ffffff !important;
+            }
+            .print-text-black {
+                color: #000000 !important;
+            }
+            .print-w-1-3 {
+                width: 33.333333% !important;
+                float: left;
+            }
+            .print-w-2-3 {
+                width: 66.666667% !important;
+                float: right;
+            }
+            .print-break-inside-avoid {
+                page-break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-100 p-4 md:p-8">
+    <div class="max-w-6xl mx-auto bg-white shadow-2xl print-shadow-none rounded-lg overflow-hidden md:flex">
+        
+        <!-- === LEFT SIDEBAR === -->
+        <div class="md:w-1/3 bg-gray-800 text-white p-8 print-bg-white print-w-1-3">
+            <div class="flex flex-col items-center md:items-start">
+                <!-- User photo placeholder -->
+                <div class=" h-52 bg-gray-600  mb-4 border-2 rounded-xl border-gray-500 overflow-hidden">
+                    <img src="image2.jpg" alt="Iman Karimian" class="w-full h-full object-cover">
+                </div>
+                <h1 class="text-3xl font-bold text-center md:text-left print-text-black">Iman Karimian</h1>
+                <h2 class="text-xl font-light text-blue-300 print-text-black text-center md:text-left">AI Engineer & Full-Stack Developer</h2>
+            </div>
+<!-- Personal Details -->
+            <div class="mt-8">
+                <h3 class="text-lg font-semibold uppercase border-b-2 border-blue-400 pb-1 print-text-black">Personal Details</h3>
+                <ul class="mt-4 space-y-3 text-sm">
+                    <li class="flex items-center">
+                        <i data-feather="calendar" class="w-5 h-5 mr-3 text-blue-300 print-text-black"></i>
+                        <span class="print-text-black">Age: 22</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i data-feather="user" class="w-5 h-5 mr-3 text-blue-300 print-text-black"></i>
+                        <span class="print-text-black">Gender: Male</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i data-feather="map-pin" class="w-5 h-5 mr-3 text-blue-300 print-text-black"></i>
+                        <span class="print-text-black">Address: Tehran</span>
+                    </li>
+                </ul>
+            </div>
+            <!-- Contact Info -->
+            <div class="mt-8">
+                <h3 class="text-lg font-semibold uppercase border-b-2 border-blue-400 pb-1 print-text-black">Contact</h3>
+                <ul class="mt-4 space-y-3">
+                    <li class="flex items-center">
+                        <i data-feather="mail" class="w-5 h-5 mr-3 text-blue-300 print-text-black"></i>
+                        <a href="mailto:imankarimian20@gmail.com" class="hover:text-blue-300 print-text-black">imankarimian@aut.ac.ir</a>
+                    </li>
+                    <li class="flex items-center">
+                        <i data-feather="phone" class="w-5 h-5 mr-3 text-blue-300 print-text-black"></i>
+                        <span class="print-text-black">+98 910 340 4205</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i data-feather="github" class="w-5 h-5 mr-3 text-blue-300 print-text-black"></i>
+                        <a href="https://github.com/IK7D3" target="_blank" class="hover:text-blue-300 print-text-black">github.com/IK7D3</a>
+                    </li>
+                    <li class="flex items-center">
+                        <i data-feather="linkedin" class="w-5 h-5 mr-3 text-blue-300 print-text-black"></i>
+                        <a href="in/iman-karimian-0757361b1" target="_blank" class="hover:text-blue-300 print-text-black">in/iman-karimian-0757361b1</a>
+                    </li>
+                    <li class="flex items-center">
+                        <i data-feather="send" class="w-5 h-5 mr-3 text-blue-300 print-text-black"></i>
+                        <a href="https://t.me/IK7D3" target="_blank" class="hover:text-blue-300 print-text-black">@IK7D3</a>
+                    </li>
+                    <li class="flex items-center">
+                        <i data-feather="info" class="w-5 h-5 mr-3 text-blue-300 print-text-black"></i>
+                        <a href="https://quera.org/profile/6yd9xf" target="_blank" class="hover:text-blue-300 print-text-black">Quera</a>
+                    </li>
+                </ul>
+            </div>
+
+            
+
+            <!-- Languages -->
+            <div class="mt-8">
+                <h3 class="text-lg font-semibold uppercase border-b-2 border-blue-400 pb-1 print-text-black">Languages</h3>
+                <ul class="mt-4 space-y-2 text-sm">
+                    <li class="print-text-black"><span class="font-semibold">Farsi (Persian):</span> Native</li>
+                    <li class="print-text-black"><span class="font-semibold">Kurdish:</span> Native</li>
+                    <li class="print-text-black"><span class="font-semibold">English:</span> Upper Intermediate B2</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- === MAIN CONTENT === -->
+        <div class="md:w-2/3 bg-white p-8 md:p-12 print-w-2-3">
+            
+            <!-- Professional Summary -->
+            <section class="print-break-inside-avoid">
+                <h2 class="text-3xl font-bold text-gray-800 border-b-4 border-gray-300 pb-2">About me</h2>
+                <p class="mt-4 text-md text-gray-700 leading-relaxed">
+                    Full-stack developer specializing in AI and LLM applications. Proven experience in building and deploying end-to-end solutions, from responsive React frontends to robust FastAPI backends. Currently focused on creating intelligent agents and automation systems using Large Language Models to solve complex problems.
+                </p>
+            </section>
+
+            <!-- Technical Skills -->
+            <section class="mt-10 print-break-inside-avoid">
+                <h2 class="text-3xl font-bold text-gray-800 border-b-4 border-gray-300 pb-2">Technical Skills</h2>
+                <div class="mt-4">
+                    <h4 class="font-semibold text-gray-700">AI & LLM</h4>
+                    <div class="flex flex-wrap gap-2 mt-2">
+                        <span class="bg-gray-200 text-gray-700 text-xs font-medium px-3 py-1 rounded-full">AI Engineering</span>
+                        <span class="bg-gray-200 text-gray-700 text-xs font-medium px-3 py-1 rounded-full">LLM Integration</span>
+                        <span class="bg-gray-200 text-gray-700 text-xs font-medium px-3 py-1 rounded-full">AI Agents</span>
+                        <span class="bg-gray-200 text-gray-700 text-xs font-medium px-3 py-1 rounded-full">LangChain</span>
+                        <span class="bg-gray-200 text-gray-700 text-xs font-medium px-3 py-1 rounded-full">Scikit-learn</span>
+                        <!-- <span class="bg-gray-200 text-gray-700 text-xs font-medium px-3 py-1 rounded-full">Cohere API</span>
+                        <span class="bg-gray-200 text-gray-700 text-xs font-medium px-3 py-1 rounded-full">OpenAI API</span> -->
+                    </div>
+
+                    <h4 class="font-semibold text-gray-700 mt-4">Frontend</h4>
+                    <div class="flex flex-wrap gap-2 mt-2">
+                        <span class="bg-gray-200 text-gray-700 text-xs font-medium px-3 py-1 rounded-full">React.js</span>
+                        <span class="bg-gray-200 text-gray-700 text-xs font-medium px-3 py-1 rounded-full">Next.js</span>
+                        <span class="bg-gray-200 text-gray-700 text-xs font-medium px-3 py-1 rounded-full">JavaScript</span>
+                        <span class="bg-gray-200 text-gray-700 text-xs font-medium px-3 py-1 rounded-full">Tailwind CSS</span>
+                
+                    </div>
+
+                    <h4 class="font-semibold text-gray-700 mt-4">Backend</h4>
+                    <div class="flex flex-wrap gap-2 mt-2">
+                        <span class="bg-gray-200 text-gray-700 text-xs font-medium px-3 py-1 rounded-full">FastAPI</span>
+                        <span class="bg-gray-200 text-gray-700 text-xs font-medium px-3 py-1 rounded-full">Python</span>
+                        <span class="bg-gray-200 text-gray-700 text-xs font-medium px-3 py-1 rounded-full">Laravel</span>
+                        <span class="bg-gray-200 text-gray-700 text-xs font-medium px-3 py-1 rounded-full">PHP</span>
+                    </div>
+
+                    <h4 class="font-semibold text-gray-700 mt-4">Databases & Tools</h4>
+                    <div class="flex flex-wrap gap-2 mt-2">
+                        <span class="bg-gray-200 text-gray-700 text-xs font-medium px-3 py-1 rounded-full">PostgreSQL</span>
+                        <span class="bg-gray-200 text-gray-700 text-xs font-medium px-3 py-1 rounded-full">MongoDB</span>
+                        <span class="bg-gray-200 text-gray-700 text-xs font-medium px-3 py-1 rounded-full">MySQL</span>
+                        <span class="bg-gray-200 text-gray-700 text-xs font-medium px-3 py-1 rounded-full">Git</span>
+                        <span class="bg-gray-200 text-gray-700 text-xs font-medium px-3 py-1 rounded-full">Telegram Bot API</span>
+                        <span class="bg-gray-200 text-gray-700 text-xs font-medium px-3 py-1 rounded-full">Deployment</span>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Certifications -->
+            <section class="mt-10 print-break-inside-avoid">
+                <h2 class="text-3xl font-bold text-gray-800 border-b-4 border-gray-300 pb-2">Certifications</h2>
+                <ul class="mt-4 space-y-2 text-sm list-disc list-inside text-gray-700">
+                    <li>
+                        <a href="https://quera.org/media/public/certificate/c70ad819cb2c4f00a0f701df5b217fcb.png" target="_blank" rel="noopener noreferrer" class="hover:text-blue-600 hover:underline">
+                            Torob Turbo Hackathon (Quera Event)
+                            <i data-feather="external-link" class="w-3 h-3 inline-block ml-1 opacity-70"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://quera.org/media/public/certificate/b369ab9b3c804f88aa3da13502bc618d.png" target="_blank" rel="noopener noreferrer" class="hover:text-blue-600 hover:underline">
+                            Deep Learning (Faradars)
+                            <i data-feather="external-link" class="w-3 h-3 inline-block ml-1 opacity-70"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://quera.org/media/public/certificate/a24c9b0de14845afae94dc961a61d463.png" target="_blank" rel="noopener noreferrer" class="hover:text-blue-600 hover:underline">
+                            Building LLM Applications (Quera College)
+                            <i data-feather="external-link" class="w-3 h-3 inline-block ml-1 opacity-70"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://quera.org/media/public/certificate/bbcfa5b78382454388a4348266b35ae3.png" target="_blank" rel="noopener noreferrer" class="hover:text-blue-600 hover:underline">
+                            Machine Learning in Python (Faradars)
+                            <i data-feather="external-link" class="w-3 h-3 inline-block ml-1 opacity-70"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://quera.org/media/public/certificate/bea8e71485224d909a2f5bab2d174132.png" target="_blank" rel="noopener noreferrer" class="hover:text-blue-600 hover:underline">
+                            Frontend Jump with React (Quera College)
+                            <i data-feather="external-link" class="w-3 h-3 inline-block ml-1 opacity-70"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://quera.org/media/public/certificate/434803031b8443dbac3c060dd6d12449.png" target="_blank" rel="noopener noreferrer" class="hover:text-blue-600 hover:underline">
+                            Practical Git (Quera College)
+                            <i data-feather="external-link" class="w-3 h-3 inline-block ml-1 opacity-70"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://quera.org/media/public/certificate/be04ecb1438e4a639d1a2a32dfefd459.png" target="_blank" rel="noopener noreferrer" class="hover:text-blue-600 hover:underline">
+                            Project-Oriented PHP Web Programming (Quera College)
+                            <i data-feather="external-link" class="w-3 h-3 inline-block ml-1 opacity-70"></i>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- Key Projects -->
+            <section class="mt-10 print-break-inside-avoid">
+                <h2 class="text-3xl font-bold text-gray-800 border-b-4 border-gray-300 pb-2">Key Projects</h2>
+                <div class="mt-6 space-y-6">
+
+                    <!-- Project 1: AI Fitness Coach -->
+                    <div class="print-break-inside-avoid">
+                        <h3 class="text-xl font-semibold text-gray-900">AI Fitness Coach (Telegram Mini-App)</h3>
+                        <p class="mt-1 text-sm text-gray-600 leading-relaxed">
+                            Developed a full-stack AI-powered fitness assistant. The app utilizes OpenAI and Cohere models to generate personalized workout plans based on user profiles and psychological assessments.
+                        </p>
+                        <p class="mt-1 text-sm text-gray-600">
+                            <strong>Role:</strong> Responsible for all frontend (React/TMA), backend (FastAPI, PostgreSQL), AI integration, and deployment.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mt-2">
+                            <span class="bg-gray-200 text-gray-700 text-xs font-medium px-3 py-1 rounded-full">Python</span>
+                            <span class="bg-gray-200 text-gray-700 text-xs font-medium px-3 py-1 rounded-full">FastAPI</span>
+                            <span class="bg-gray-200 text-gray-700 text-xs font-medium px-3 py-1 rounded-full">PostgreSQL</span>
+                            <span class="bg-gray-200 text-gray-700 text-xs font-medium px-3 py-1 rounded-full">OpenAI API</span>
+                            <span class="bg-gray-200 text-gray-700 text-xs font-medium px-3 py-1 rounded-full">Cohere API</span>
+                            <span class="bg-gray-200 text-gray-700 text-xs font-medium px-3 py-1 rounded-full">React.js</span>
+                        </div>
+                    </div>
+
+                    <!-- Project 2: CodeGobbler Extension -->
+                    <div class="print-break-inside-avoid">
+                        <h3 class="text-xl font-semibold text-gray-900">CodeGobbler Chrome Extension</h3>
+                        <p class="mt-1 text-sm text-gray-600 leading-relaxed">
+                            Created a browser extension to solve coding questions from Quera.org with a single click by integrating the Cohere language model.
+                        </p>
+                        <p class="mt-1 text-sm text-gray-600">
+                            <strong>Achievement:</strong> Gained 20+ stars on GitHub and earned the "Starstruck" achievement.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mt-2">
+                            <span class="bg-gray-200 text-gray-700 text-xs font-medium px-3 py-1 rounded-full">Python</span>
+                            <span class="bg-gray-200 text-gray-700 text-xs font-medium px-3 py-1 rounded-full">JavaScript</span>
+                            <span class="bg-gray-200 text-gray-700 text-xs font-medium px-3 py-1 rounded-full">Cohere API</span>
+                            <span class="bg-gray-200 text-gray-700 text-xs font-medium px-3 py-1 rounded-full">Chrome Extension</span>
+                        </div>
+                    </div>
+
+                    <!-- Project 3: Karmandan Iran Employee Portal -->
+                    <div class="print-break-inside-avoid">
+                        <h3 class="text-xl font-semibold text-gray-900">Employee Management System ("Karmandan Iran")</h3>
+                        <p class="mt-1 text-sm text-gray-600 leading-relaxed">
+                            Engineered a comprehensive web application for managing employee check-in/out, time tracking, and financial requests.
+                        </p>
+                         <p class="mt-1 text-sm text-gray-600">
+                            <strong>Role:</strong> Led full-stack development from concept to deployment.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mt-2">
+                            <span class="bg-gray-200 text-gray-700 text-xs font-medium px-3 py-1 rounded-full">React.js</span>
+                            <span class="bg-gray-200 text-gray-700 text-xs font-medium px-3 py-1 rounded-full">Laravel</span>
+                            <span class="bg-gray-200 text-gray-700 text-xs font-medium px-3 py-1 rounded-full">MySQL</span>
+                        </div>
+                    </div>
+
+                    <!-- Project 4: Yazd University Student Bot -->
+                    <div class="print-break-inside-avoid">
+                        <h3 class="text-xl font-semibold text-gray-900">Yazd University Student Union Bot</h3>
+                        <p class="mt-1 text-sm text-gray-600 leading-relaxed">
+                            Developed a Telegram bot featuring anonymous messaging and group management to facilitate communication between students and the university's student union.
+                        </p>
+                        <p class="mt-1 text-sm text-gray-600">
+                            <strong>Achievement:</strong> Successfully attracted and onboarded approximately 600 student users.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mt-2">
+                            <span class="bg-gray-200 text-gray-700 text-xs font-medium px-3 py-1 rounded-full">PHP</span>
+                            <span class="bg-gray-200 text-gray-700 text-xs font-medium px-3 py-1 rounded-full">MySQL</span>
+                            <span class="bg-gray-200 text-gray-700 text-xs font-medium px-3 py-1 rounded-full">Telegram Bot API</span>
+                        </div>
+                    </div>
+
+                    <!-- Project 5: B.Sc. Thesis Project -->
+                    <div class="print-break-inside-avoid">
+                        <h3 class="text-xl font-semibold text-gray-900">Edu-Booking-Bot (B.Sc. Thesis Project)</h3>
+                        <p class="mt-1 text-sm text-gray-600 leading-relaxed">
+                            A Telegram mini-app and web platform for students to book appointments with professors.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mt-2">
+                            <span class="bg-gray-200 text-gray-700 text-xs font-medium px-3 py-1 rounded-full">PHP</span>
+                            <span class="bg-gray-200 text-gray-700 text-xs font-medium px-3 py-1 rounded-full">MySQL</span>
+                            <span class="bg-gray-200 text-gray-700 text-xs font-medium px-3 py-1 rounded-full">React.js</span>
+                            <span class="bg-gray-200 text-gray-700 text-xs font-medium px-3 py-1 rounded-full">JavaScript</span>
+                            <span class="bg-gray-200 text-gray-700 text-xs font-medium px-3 py-1 rounded-full">Telegram Bot API</span>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Education -->
+            <section class="mt-10 print-break-inside-avoid">
+                <h2 class="text-3xl font-bold text-gray-800 border-b-4 border-gray-300 pb-2">Education</h2>
+                <div class="mt-6 space-y-4">
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-900">M.Sc. in IT Engineering</h3>
+                        <p class="text-md font-medium text-gray-700">Amirkabir University of Technology (Tehran Polytechnic)</p>
+                        <p class="text-sm text-gray-600 italic">Oct 2025 – Present</p>
+                        <p class="text-sm text-gray-600">Ranked 28th (non-quota) in National M.Sc. Entrance Exam (Konkur)</p>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-900">B.Sc. in Computer Engineering (Software)</h3>
+                        <p class="text-md font-medium text-gray-700">Yazd University</p>
+                        <p class="text-sm text-gray-600 italic">Oct 2021 – Sep 2025</p>
+                        <p class="text-sm text-gray-600">GPA: 16.96 / 20.0</p>
+                    </div>
+                     <div>
+                        <h3 class="text-xl font-semibold text-gray-900">High School Diploma (Mathematics & Physics)</h3>
+                        <p class="text-md font-medium text-gray-700">Allameh Helli 8 (SAMPAD)</p>
+                        <p class="text-sm text-gray-600 italic">Graduated: June 2021</p>
+                        <p class="text-sm text-gray-600">GPA: 18.23 / 20.0</p>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Awards & Honors -->
+            <section class="mt-10 print-break-inside-avoid">
+                <h2 class="text-3xl font-bold text-gray-800 border-b-4 border-gray-300 pb-2">Awards & Honors</h2>
+                <ul class="mt-4 space-y-2 list-disc list-inside text-gray-700">
+                    <li>
+                        <strong>19th Place (out of 2000+), Torob Turbo Hackathon</strong> - Built an LLM agent assistant for Torob. (2025)
+                    </li>
+                    <li>
+                        <strong>8th Place, National CoderCombat Contest</strong> (March 2025)
+                    </li>
+                    <li>
+                        <strong>4th National Scholastic Festival of Ibn Sina</strong> - Certificate in Python Algorithm Programming (May 2019)
+                    </li>
+                    <li>
+                        <strong>3rd Place, Roshd E-Content Production Festival</strong> (Feb 2017)
+                    </li>
+                     <li>
+                        <strong>1st Place, SAMPAD E-Content Production Festival</strong> (March 2015)
+                    </li>
+                </ul>
+            </section>
+            <section class="mt-10 print-break-inside-avoid">
+  <h2 class="text-3xl font-bold text-gray-800 border-b-4 border-gray-300 pb-2">
+    Research Interests
+  </h2>
+  <p class="mt-4 text-md text-gray-700 leading-relaxed">
+    My research interests lie at the intersection of Artificial Intelligence, Natural Language Processing, and Intelligent Systems. 
+    I am particularly interested in advancing Large Language Models (LLMs), autonomous agents, and their applications in complex real-world decision-making and automation. 
+    I aim to explore how multi-agent collaboration, reasoning, and adaptive learning can enhance AI reliability and scalability.
+  </p>
+</section>
+           
+        </div>
+    </div>
+
+    <script>
+        // Initialize Feather Icons
+        feather.replace();
+    </script>
+</body>
+</html>
+
+
