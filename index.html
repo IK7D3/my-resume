@@ -4,19 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Iman Karimian - Resume</title>
-    <!-- Tailwind CSS CDN -->
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Lucide Icons CDN -->
-    <script src="https://unpkg.com/lucide-react@latest/dist/lucide-react.js"></script>
-    <script>
-        // Workaround for using lucide-react in browser
-        // In a real React app, you'd import { IconName } from 'lucide-react';
-        // Here, we'll use the global 'lucide' object.
-        // We'll replace this with a better CDN for plain icons.
-    </script>
-    <!-- Using Feather Icons as a simple alternative for non-React CDN -->
+    <!-- Feather Icons -->
     <script src="https://unpkg.com/feather-icons"></script>
-    
     <!-- Google Fonts: Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,12 +16,15 @@
     <style>
         body {
             font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6; /* Gray-100 to make the resume pop out */
         }
         /* Custom styles for printing */
         @media print {
             body {
+                background-color: #ffffff;
                 -webkit-print-color-adjust: exact;
                 print-color-adjust: exact;
+                margin: 0;
             }
             .no-print {
                 display: none;
@@ -55,23 +49,32 @@
             .print-break-inside-avoid {
                 page-break-inside: avoid;
             }
+            /* Hide print button on print */
+            #print-button-container {
+                display: none;
+            }
         }
     </style>
 </head>
-<body class="bg-gray-100 p-4 md:p-8">
-    <div class="max-w-6xl mx-auto bg-white shadow-2xl print-shadow-none rounded-lg overflow-hidden md:flex">
+<body class="py-10">
+
+   
+    <!-- Main Resume Container -->
+    <div class="max-w-5xl mx-auto bg-white shadow-xl flex flex-col md:flex-row print-shadow-none">
         
         <!-- === LEFT SIDEBAR === -->
         <div class="md:w-1/3 bg-gray-800 text-white p-8 print-bg-white print-w-1-3">
             <div class="flex flex-col items-center md:items-start">
                 <!-- User photo placeholder -->
-                <div class=" h-52 bg-gray-600  mb-4 border-2 rounded-xl border-gray-500 overflow-hidden">
+                <div class="h-52 w-full max-w-[208px] bg-gray-600 mb-4 border-2 rounded-xl border-gray-500 overflow-hidden flex items-center justify-center">
+                   <!-- Fallback to placehold.co if image2.jpg is missing -->
                     <img src="image2.jpg" alt="Iman Karimian" class="w-full h-full object-cover">
                 </div>
                 <h1 class="text-3xl font-bold text-center md:text-left print-text-black">Iman Karimian</h1>
-                <h2 class="text-xl font-light text-blue-300 print-text-black text-center md:text-left">AI Engineer & Full-Stack Developer</h2>
+                <h2 class="text-xl font-light text-blue-300 print-text-black text-center md:text-left">AI Engineer</h2>
             </div>
-<!-- Personal Details -->
+
+            <!-- Personal Details -->
             <div class="mt-8">
                 <h3 class="text-lg font-semibold uppercase border-b-2 border-blue-400 pb-1 print-text-black">Personal Details</h3>
                 <ul class="mt-4 space-y-3 text-sm">
@@ -89,13 +92,14 @@
                     </li>
                 </ul>
             </div>
+
             <!-- Contact Info -->
             <div class="mt-8">
                 <h3 class="text-lg font-semibold uppercase border-b-2 border-blue-400 pb-1 print-text-black">Contact</h3>
                 <ul class="mt-4 space-y-3">
                     <li class="flex items-center">
                         <i data-feather="mail" class="w-5 h-5 mr-3 text-blue-300 print-text-black"></i>
-                        <a href="mailto:imankarimian20@gmail.com" class="hover:text-blue-300 print-text-black">imankarimian@aut.ac.ir</a>
+                        <a href="mailto:imankarimian@aut.ac.ir" class="hover:text-blue-300 print-text-black break-all">imankarimian@aut.ac.ir</a>
                     </li>
                     <li class="flex items-center">
                         <i data-feather="phone" class="w-5 h-5 mr-3 text-blue-300 print-text-black"></i>
@@ -107,7 +111,7 @@
                     </li>
                     <li class="flex items-center">
                         <i data-feather="linkedin" class="w-5 h-5 mr-3 text-blue-300 print-text-black"></i>
-                        <a href="https://www.linkedin.com/in/iman-karimian-0757361b1" target="_blank" class="hover:text-blue-300 print-text-black">in/iman-karimian-0757361b1</a>
+                        <a href="https://www.linkedin.com/in/iman-karimian-0757361b1" target="_blank" class="hover:text-blue-300 print-text-black break-all">in/iman-karimian-0757361b1</a>
                     </li>
                     <li class="flex items-center">
                         <i data-feather="send" class="w-5 h-5 mr-3 text-blue-300 print-text-black"></i>
@@ -115,12 +119,10 @@
                     </li>
                     <li class="flex items-center">
                         <i data-feather="info" class="w-5 h-5 mr-3 text-blue-300 print-text-black"></i>
-                        <a href="https://quera.org/profile/6yd9xf" target="_blank" class="hover:text-blue-300 print-text-black">Quera</a>
+                        <a href="https://quera.org/profile/6yd9xf" target="_blank" class="hover:text-blue-300 print-text-black">Quera Profile</a>
                     </li>
                 </ul>
             </div>
-
-            
 
             <!-- Languages -->
             <div class="mt-8">
@@ -128,7 +130,7 @@
                 <ul class="mt-4 space-y-2 text-sm">
                     <li class="print-text-black"><span class="font-semibold">Farsi (Persian):</span> Native</li>
                     <li class="print-text-black"><span class="font-semibold">Kurdish:</span> Native</li>
-                    <li class="print-text-black"><span class="font-semibold">English:</span> Upper Intermediate B2</li>
+                    <li class="print-text-black"><span class="font-semibold">English:</span> Intermediate B1</li>
                 </ul>
             </div>
         </div>
@@ -138,9 +140,17 @@
             
             <!-- Professional Summary -->
             <section class="print-break-inside-avoid">
-                <h2 class="text-3xl font-bold text-gray-800 border-b-4 border-gray-300 pb-2">About me</h2>
+                <h2 class="text-3xl font-bold text-gray-800 border-b-4 border-gray-300 pb-2">About Me</h2>
                 <p class="mt-4 text-md text-gray-700 leading-relaxed">
-                    Full-stack developer specializing in AI and LLM applications. Proven experience in building and deploying end-to-end solutions, from responsive React frontends to robust FastAPI backends. Currently focused on creating intelligent agents and automation systems using Large Language Models to solve complex problems.
+                    AI Engineer specializing in Large Language Models (LLMs), Natural Language Processing (NLP), Autonomous Agents, and Tool Calling / Function Calling workflows, alongside RAG architectures. Currently pursuing an M.Sc. in IT Engineering at Amirkabir University of Technology, focusing thesis research on LLM-driven intelligent assistants for IoT industrial systems. Experienced in building practical AI solutions, intelligent chatbots, and integrating LLMs with custom enterprise APIs and toolsets.
+                </p>
+            </section>
+
+            <!-- M.Sc. Thesis Project -->
+            <section class="mt-10 print-break-inside-avoid">
+                <h2 class="text-3xl font-bold text-gray-800 border-b-4 border-gray-300 pb-2">M.Sc. Thesis Project</h2>
+                <p class="mt-4 text-md text-gray-700 leading-relaxed">
+                    <strong>LLM-Based Intelligent Assistant for Controlling IoT Systems:</strong> Developing an industrial chatbot leveraging factory operational datasets and dedicated API middleware to enable natural language monitoring, automated reasoning, and control over complex IoT hardware networks.
                 </p>
             </section>
 
@@ -148,95 +158,112 @@
             <section class="mt-10 print-break-inside-avoid">
                 <h2 class="text-3xl font-bold text-gray-800 border-b-4 border-gray-300 pb-2">Technical Skills</h2>
                 <div class="mt-4">
-                    <h4 class="font-semibold text-gray-700">AI & LLM</h4>
+                    <h4 class="font-semibold text-gray-700">AI & LLM Engineering</h4>
                     <div class="flex flex-wrap gap-2 mt-2">
-                        <span class="bg-gray-200 text-gray-700 text-xs font-medium px-3 py-1 rounded-full">AI Engineering</span>
-                        <span class="bg-gray-200 text-gray-700 text-xs font-medium px-3 py-1 rounded-full">LLM Application Development (RAG, Agents)</span>
-                        <!-- <span class="bg-gray-200 text-gray-700 text-xs font-medium px-3 py-1 rounded-full">AI Agents</span> -->
+                        <span class="bg-gray-200 text-gray-700 text-xs font-medium px-3 py-1 rounded-full">LLM APIs</span>
+                        <span class="bg-gray-200 text-gray-700 text-xs font-medium px-3 py-1 rounded-full">Natural Language Processing</span>
+                        <span class="bg-gray-200 text-gray-700 text-xs font-medium px-3 py-1 rounded-full">Tool Calling</span>
+                        <span class="bg-gray-200 text-gray-700 text-xs font-medium px-3 py-1 rounded-full">RAG Architecture</span>
+                        <span class="bg-gray-200 text-gray-700 text-xs font-medium px-3 py-1 rounded-full">AI Agents</span>
                         <span class="bg-gray-200 text-gray-700 text-xs font-medium px-3 py-1 rounded-full">LangChain</span>
-                        <span class="bg-gray-200 text-gray-700 text-xs font-medium px-3 py-1 rounded-full">Scikit-learn</span>
-                        <!-- <span class="bg-gray-200 text-gray-700 text-xs font-medium px-3 py-1 rounded-full">Cohere API</span>
-                        <span class="bg-gray-200 text-gray-700 text-xs font-medium px-3 py-1 rounded-full">OpenAI API</span> -->
+                        <span class="bg-gray-200 text-gray-700 text-xs font-medium px-3 py-1 rounded-full">Transformers & Attention</span>
+                        <span class="bg-gray-200 text-gray-700 text-xs font-medium px-3 py-1 rounded-full">LLM Evaluation</span>
                     </div>
 
-                    <h4 class="font-semibold text-gray-700 mt-4">Frontend</h4>
+                    <h4 class="font-semibold text-gray-700 mt-4">Machine Learning & Deep Learning</h4>
+                    <div class="flex flex-wrap gap-2 mt-2">
+                        <span class="bg-gray-200 text-gray-700 text-xs font-medium px-3 py-1 rounded-full">Scikit-learn</span>
+                        <span class="bg-gray-200 text-gray-700 text-xs font-medium px-3 py-1 rounded-full">Classical ML Algorithms</span>
+                        <span class="bg-gray-200 text-gray-700 text-xs font-medium px-3 py-1 rounded-full">Fine-tuning</span>
+                        <!-- <span class="bg-gray-200 text-gray-700 text-xs font-medium px-3 py-1 rounded-full">Computer Vision (CNNs, Q-Former)</span> -->
+                    </div>
+
+                    <h4 class="font-semibold text-gray-700 mt-4">Backend & APIs</h4>
+                    <div class="flex flex-wrap gap-2 mt-2">
+                        <span class="bg-gray-200 text-gray-700 text-xs font-medium px-3 py-1 rounded-full">Python</span>
+                        <span class="bg-gray-200 text-gray-700 text-xs font-medium px-3 py-1 rounded-full">FastAPI</span>
+                        <span class="bg-gray-200 text-gray-700 text-xs font-medium px-3 py-1 rounded-full">REST API Design</span>
+                        <span class="bg-gray-200 text-gray-700 text-xs font-medium px-3 py-1 rounded-full">PHP</span>
+                        <span class="bg-gray-200 text-gray-700 text-xs font-medium px-3 py-1 rounded-full">Laravel</span>
+                    </div>
+                    <h4 class="font-semibold text-gray-700 mt-4">Frontend Integration</h4>
                     <div class="flex flex-wrap gap-2 mt-2">
                         <span class="bg-gray-200 text-gray-700 text-xs font-medium px-3 py-1 rounded-full">React.js</span>
                         <span class="bg-gray-200 text-gray-700 text-xs font-medium px-3 py-1 rounded-full">Next.js</span>
                         <span class="bg-gray-200 text-gray-700 text-xs font-medium px-3 py-1 rounded-full">JavaScript</span>
                         <span class="bg-gray-200 text-gray-700 text-xs font-medium px-3 py-1 rounded-full">Tailwind CSS</span>
-                
                     </div>
 
-                    <h4 class="font-semibold text-gray-700 mt-4">Backend</h4>
-                    <div class="flex flex-wrap gap-2 mt-2">
-                        <span class="bg-gray-200 text-gray-700 text-xs font-medium px-3 py-1 rounded-full">FastAPI</span>
-                        <span class="bg-gray-200 text-gray-700 text-xs font-medium px-3 py-1 rounded-full">Python</span>
-                        <span class="bg-gray-200 text-gray-700 text-xs font-medium px-3 py-1 rounded-full">Laravel</span>
-                        <span class="bg-gray-200 text-gray-700 text-xs font-medium px-3 py-1 rounded-full">PHP</span>
-                    </div>
-
-                    <h4 class="font-semibold text-gray-700 mt-4">Databases & Tools</h4>
+                    <h4 class="font-semibold text-gray-700 mt-4">Tools & DevOps</h4>
                     <div class="flex flex-wrap gap-2 mt-2">
                         <span class="bg-gray-200 text-gray-700 text-xs font-medium px-3 py-1 rounded-full">PostgreSQL</span>
                         <span class="bg-gray-200 text-gray-700 text-xs font-medium px-3 py-1 rounded-full">MongoDB</span>
                         <span class="bg-gray-200 text-gray-700 text-xs font-medium px-3 py-1 rounded-full">MySQL</span>
                         <span class="bg-gray-200 text-gray-700 text-xs font-medium px-3 py-1 rounded-full">Git</span>
-                        <span class="bg-gray-200 text-gray-700 text-xs font-medium px-3 py-1 rounded-full">Telegram Bot API</span>
-                        <span class="bg-gray-200 text-gray-700 text-xs font-medium px-3 py-1 rounded-full">Deployment</span>
+                        <span class="bg-gray-200 text-gray-700 text-xs font-medium px-3 py-1 rounded-full">Vector Databases</span>
+                    </div>
+
+                    
+                </div>
+            </section>
+
+            <!-- Education -->
+            <section class="mt-10 print-break-inside-avoid">
+                <h2 class="text-3xl font-bold text-gray-800 border-b-4 border-gray-300 pb-2">Education</h2>
+                <div class="mt-6 space-y-6">
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-900">M.Sc. in IT Engineering</h3>
+                        <p class="text-md font-medium text-gray-700">Amirkabir University of Technology (Tehran Polytechnic)</p>
+                        <p class="text-sm text-gray-600 italic">Oct 2025 – Present</p>
+                        <p class="text-sm text-gray-600 mt-1">Ranked 28th (non-quota) in National M.Sc. Entrance Exam (Konkur)</p>
+
+                        <!-- Selected Top Coursework -->
+                    <div class="mt-4 pt-3 border-t border-gray-200">
+                        <h4 class="text-md font-bold text-gray-800 mb-2">Selected Top Academic Coursework</h4>
+                        <div class="space-y-3 text-sm text-gray-700">
+                            <div class="bg-gray-50 p-3 rounded-lg border border-gray-200">
+                                <div class="flex justify-between font-semibold text-gray-900 flex-wrap">
+                                    <span>Advanced Natural Language Processing (Dr. Zeinali)</span>
+                                    <span class="text-blue-600 font-bold">17.35 / 20</span>
+                                </div>
+                                <p class="text-xs text-gray-600 mt-1">Transformers, Attention Mechanisms, nlp, RAG Architecture, AI Agents, LLM Evaluation.</p>
+                            </div>
+
+                            <div class="bg-gray-50 p-3 rounded-lg border border-gray-200">
+                                <div class="flex justify-between font-semibold text-gray-900 flex-wrap">
+                                    <span>Advanced Applications of Artificial Intelligence (Dr. Sharifian)</span>
+                                    <span class="text-blue-600 font-bold">19.75 / 20</span>
+                                </div>
+                                <p class="text-xs text-gray-600 mt-1">Deep Learning, CNNs, Yolo, Computer Vision, Transformers, Q-Former, AI Agents.</p>
+                            </div>
+
+                            <div class="bg-gray-50 p-3 rounded-lg border border-gray-200">
+                                <div class="flex justify-between font-semibold text-gray-900 flex-wrap">
+                                    <span>Machine Learning (Dr. Nazerfard)</span>
+                                    <span class="text-blue-600 font-bold">19.70 / 20</span>
+                                </div>
+                                <p class="text-xs text-gray-600 mt-1">Classical Machine Learning Algorithms, Supervised & Unsupervised Learning.</p>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-900">B.Sc. in Computer Engineering (Software)</h3>
+                        <p class="text-md font-medium text-gray-700">Yazd University</p>
+                        <p class="text-sm text-gray-600 italic">Oct 2021 – Sep 2025</p>
+                        <p class="text-sm text-gray-600 mt-1">GPA: 16.96 / 20.0</p>
+                    </div>
+
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-900">High School Diploma (Mathematics & Physics)</h3>
+                        <p class="text-md font-medium text-gray-700">Allameh Helli 8 (SAMPAD)</p>
+                        <p class="text-sm text-gray-600 italic">Graduated: June 2021</p>
+                        <p class="text-sm text-gray-600">GPA: 18.23 / 20.0</p>
                     </div>
                 </div>
             </section>
             
-            <!-- Certifications -->
-            <section class="mt-10 print-break-inside-avoid">
-                <h2 class="text-3xl font-bold text-gray-800 border-b-4 border-gray-300 pb-2">Certifications</h2>
-                <ul class="mt-4 space-y-2 text-sm list-disc list-inside text-gray-700">
-                    <li>
-                        <a href="https://quera.org/media/public/certificate/c70ad819cb2c4f00a0f701df5b217fcb.png" target="_blank" rel="noopener noreferrer" class="hover:text-blue-600 hover:underline">
-                            Torob Turbo Hackathon (LLM-based agent)
-                            <i data-feather="external-link" class="w-3 h-3 inline-block ml-1 opacity-70"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://quera.org/media/public/certificate/b369ab9b3c804f88aa3da13502bc618d.png" target="_blank" rel="noopener noreferrer" class="hover:text-blue-600 hover:underline">
-                            Deep Learning (Faradars)
-                            <i data-feather="external-link" class="w-3 h-3 inline-block ml-1 opacity-70"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://quera.org/media/public/certificate/a24c9b0de14845afae94dc961a61d463.png" target="_blank" rel="noopener noreferrer" class="hover:text-blue-600 hover:underline">
-                            Building LLM Applications (Quera College)
-                            <i data-feather="external-link" class="w-3 h-3 inline-block ml-1 opacity-70"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://quera.org/media/public/certificate/bbcfa5b78382454388a4348266b35ae3.png" target="_blank" rel="noopener noreferrer" class="hover:text-blue-600 hover:underline">
-                            Machine Learning in Python (Faradars)
-                            <i data-feather="external-link" class="w-3 h-3 inline-block ml-1 opacity-70"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://quera.org/media/public/certificate/bea8e71485224d909a2f5bab2d174132.png" target="_blank" rel="noopener noreferrer" class="hover:text-blue-600 hover:underline">
-                            Frontend Jump with React (Quera College)
-                            <i data-feather="external-link" class="w-3 h-3 inline-block ml-1 opacity-70"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://quera.org/media/public/certificate/434803031b8443dbac3c060dd6d12449.png" target="_blank" rel="noopener noreferrer" class="hover:text-blue-600 hover:underline">
-                            Practical Git (Quera College)
-                            <i data-feather="external-link" class="w-3 h-3 inline-block ml-1 opacity-70"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://quera.org/media/public/certificate/be04ecb1438e4a639d1a2a32dfefd459.png" target="_blank" rel="noopener noreferrer" class="hover:text-blue-600 hover:underline">
-                            Project-Oriented PHP Web Programming (Quera College)
-                            <i data-feather="external-link" class="w-3 h-3 inline-block ml-1 opacity-70"></i>
-                        </a>
-                    </li>
-                </ul>
-            </section>
-
             <!-- Key Projects -->
             <section class="mt-10 print-break-inside-avoid">
                 <h2 class="text-3xl font-bold text-gray-800 border-b-4 border-gray-300 pb-2">Key Projects</h2>
@@ -296,7 +323,7 @@
                         <p class="mt-1 text-sm text-gray-600 leading-relaxed">
                             Engineered a comprehensive web application for managing employee check-in/out, time tracking, and financial requests.
                         </p>
-                         <p class="mt-1 text-sm text-gray-600">
+                        <p class="mt-1 text-sm text-gray-600">
                             <strong>Role:</strong> Led full-stack development from concept to deployment.
                         </p>
                         <div class="flex flex-wrap gap-2 mt-2">
@@ -350,29 +377,53 @@
                 </div>
             </section>
 
-            <!-- Education -->
+            <!-- Certifications -->
             <section class="mt-10 print-break-inside-avoid">
-                <h2 class="text-3xl font-bold text-gray-800 border-b-4 border-gray-300 pb-2">Education</h2>
-                <div class="mt-6 space-y-4">
-                    <div>
-                        <h3 class="text-xl font-semibold text-gray-900">M.Sc. in IT Engineering</h3>
-                        <p class="text-md font-medium text-gray-700">Amirkabir University of Technology (Tehran Polytechnic)</p>
-                        <p class="text-sm text-gray-600 italic">Oct 2025 – Present</p>
-                        <p class="text-sm text-gray-600">Ranked 28th (non-quota) in National M.Sc. Entrance Exam (Konkur)</p>
-                    </div>
-                    <div>
-                        <h3 class="text-xl font-semibold text-gray-900">B.Sc. in Computer Engineering (Software)</h3>
-                        <p class="text-md font-medium text-gray-700">Yazd University</p>
-                        <p class="text-sm text-gray-600 italic">Oct 2021 – Sep 2025</p>
-                        <p class="text-sm text-gray-600">GPA: 16.96 / 20.0</p>
-                    </div>
-                     <div>
-                        <h3 class="text-xl font-semibold text-gray-900">High School Diploma (Mathematics & Physics)</h3>
-                        <p class="text-md font-medium text-gray-700">Allameh Helli 8 (SAMPAD)</p>
-                        <p class="text-sm text-gray-600 italic">Graduated: June 2021</p>
-                        <p class="text-sm text-gray-600">GPA: 18.23 / 20.0</p>
-                    </div>
-                </div>
+                <h2 class="text-3xl font-bold text-gray-800 border-b-4 border-gray-300 pb-2">Certifications</h2>
+                <ul class="mt-4 space-y-2 text-sm list-disc list-inside text-gray-700">
+                    <li>
+                        <a href="https://quera.org/media/public/certificate/c70ad819cb2c4f00a0f701df5b217fcb.png" target="_blank" rel="noopener noreferrer" class="hover:text-blue-600 hover:underline">
+                            Torob Turbo Hackathon (LLM-based agent)
+                            <i data-feather="external-link" class="w-3 h-3 inline-block ml-1 opacity-70"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://quera.org/media/public/certificate/b369ab9b3c804f88aa3da13502bc618d.png" target="_blank" rel="noopener noreferrer" class="hover:text-blue-600 hover:underline">
+                            Deep Learning (Faradars)
+                            <i data-feather="external-link" class="w-3 h-3 inline-block ml-1 opacity-70"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://quera.org/media/public/certificate/a24c9b0de14845afae94dc961a61d463.png" target="_blank" rel="noopener noreferrer" class="hover:text-blue-600 hover:underline">
+                            Building LLM Applications (Quera College)
+                            <i data-feather="external-link" class="w-3 h-3 inline-block ml-1 opacity-70"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://quera.org/media/public/certificate/bbcfa5b78382454388a4348266b35ae3.png" target="_blank" rel="noopener noreferrer" class="hover:text-blue-600 hover:underline">
+                            Machine Learning in Python (Faradars)
+                            <i data-feather="external-link" class="w-3 h-3 inline-block ml-1 opacity-70"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://quera.org/media/public/certificate/bea8e71485224d909a2f5bab2d174132.png" target="_blank" rel="noopener noreferrer" class="hover:text-blue-600 hover:underline">
+                            Frontend Jump with React (Quera College)
+                            <i data-feather="external-link" class="w-3 h-3 inline-block ml-1 opacity-70"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://quera.org/media/public/certificate/434803031b8443dbac3c060dd6d12449.png" target="_blank" rel="noopener noreferrer" class="hover:text-blue-600 hover:underline">
+                            Practical Git (Quera College)
+                            <i data-feather="external-link" class="w-3 h-3 inline-block ml-1 opacity-70"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://quera.org/media/public/certificate/be04ecb1438e4a639d1a2a32dfefd459.png" target="_blank" rel="noopener noreferrer" class="hover:text-blue-600 hover:underline">
+                            Project-Oriented PHP Web Programming (Quera College)
+                            <i data-feather="external-link" class="w-3 h-3 inline-block ml-1 opacity-70"></i>
+                        </a>
+                    </li>
+                </ul>
             </section>
             
             <!-- Awards & Honors -->
@@ -391,21 +442,11 @@
                     <li>
                         <strong>3rd Place, Roshd E-Content Production Festival</strong> (Feb 2017)
                     </li>
-                     <li>
+                    <li>
                         <strong>1st Place, SAMPAD E-Content Production Festival</strong> (March 2015)
                     </li>
                 </ul>
             </section>
-            <section class="mt-10 print-break-inside-avoid">
-  <h2 class="text-3xl font-bold text-gray-800 border-b-4 border-gray-300 pb-2">
-    Research Interests
-  </h2>
-  <p class="mt-4 text-md text-gray-700 leading-relaxed">
-    My research interests lie at the intersection of Artificial Intelligence, Natural Language Processing, and Intelligent Systems. 
-    I am particularly interested in advancing Large Language Models (LLMs), autonomous agents, and their applications in complex real-world decision-making and automation. 
-    I aim to explore how multi-agent collaboration, reasoning, and adaptive learning can enhance AI reliability and scalability.
-  </p>
-</section>
            
         </div>
     </div>
@@ -416,5 +457,3 @@
     </script>
 </body>
 </html>
-
-
